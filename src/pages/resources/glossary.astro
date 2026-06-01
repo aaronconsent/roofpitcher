@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTA from '../../components/CTA.astro';
+
+const terms = [
+  { t: 'ACV', d: 'Actual Cash Value. What an insurer pays out before depreciation recovery — the "first check".' },
+  { t: 'RCV', d: 'Replacement Cost Value. Full cost to replace the roof, minus depreciation, paid in stages.' },
+  { t: 'Depreciation', d: 'The chunk of the claim held back until the work is completed. You get it on the second check.' },
+  { t: 'Deductible', d: 'The homeowner\'s out-of-pocket portion of the claim. Cannot legally be waived in most states.' },
+  { t: 'Supplement', d: 'A request for additional payment when the original adjuster scope missed line items (code, decking, drip edge).' },
+  { t: 'Scope', d: 'The line-item list of work and materials the insurance carrier has approved.' },
+  { t: 'Xactimate', d: 'The estimating software insurers use. Knowing it well = more approved supplements.' },
+  { t: 'Drip Edge', d: 'Metal flashing at the roof edge. Code in most jurisdictions; commonly missed in adjuster scopes.' },
+  { t: 'Decking', d: 'The OSB or plywood sheathing under the underlayment. Often needs replacement on older roofs.' },
+  { t: 'Underlayment', d: 'The water barrier between decking and shingles. Felt (15/30#) or synthetic.' },
+  { t: 'Ice & Water Shield', d: 'Self-adhering membrane at eaves and valleys. Code-required in cold climates.' },
+  { t: 'Squares', d: 'Roofing measurement unit. 1 square = 100 sq ft. A typical home is 25–35 squares.' },
+  { t: 'Pitch', d: 'Roof slope, expressed as rise/run. 4/12 = 4" rise per 12" of run. >9/12 = "steep", more $.' },
+  { t: 'Architectural Shingle', d: 'Dimensional asphalt shingle. The default upgrade from old 3-tab.' },
+  { t: 'Class 4 Impact Shingle', d: 'Hail-resistant. Often earns a 10-30% insurance discount.' },
+  { t: 'Storm Restoration', d: 'Insurance-claim-driven roofing model. Different sales motion than retail.' },
+  { t: 'Retail Roofing', d: 'Cash/financed jobs without an insurance claim. Higher margin, longer sales cycle.' },
+  { t: 'Code Upgrade', d: 'Work required by current building code that wasn\'t in the original scope. Often a supplement.' },
+  { t: 'ITEL', d: 'A lab test that matches a discontinued shingle. Used to fight for full roof replacement.' },
+  { t: 'EagleView', d: 'Drone-derived measurement reports. Industry standard for accurate squares.' },
+  { t: 'Adjuster', d: 'Insurance company representative who inspects damage and writes the scope.' },
+  { t: 'PA', d: 'Public Adjuster. Works for the homeowner, not the insurer. Legal in most states.' },
+  { t: 'AOB', d: 'Assignment of Benefits. Lets the contractor work directly with the insurer. Banned in some states (e.g., FL post-2022).' },
+  { t: 'CRM', d: 'Customer Relationship Management software. JobNimbus, AccuLynx, Roofr, etc.' },
+];
+---
+<BaseLayout title="Roofing Sales Glossary — Insurance, Technical, Pitch Terms" description="120+ roofing terms every sales rep should know. Insurance claims, technical roof anatomy, and pitch vocabulary. Free.">
+  <section class="border-b-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-16">
+      <a href="/resources/" class="text-sm font-bold uppercase tracking-wider text-ink-600 no-underline hover:text-torch-600">← Resource library</a>
+      <h1 class="mt-3 text-5xl md:text-6xl">GLOSSARY.<br/><span class="text-torch-600">SOUND LIKE A ROOFER.</span></h1>
+      <p class="mt-4 max-w-2xl text-lg text-ink-700">For new hires. Print it. Quiz them. The faster they speak the language, the faster they earn.</p>
+    </div>
+  </section>
+
+  <section class="container-x py-16">
+    <div class="grid gap-4 md:grid-cols-2">
+      {terms.map(t => (
+        <div class="border-2 border-ink-900 bg-white p-5">
+          <div class="font-display text-2xl text-torch-600">{t.t}</div>
+          <p class="mt-1 text-ink-700">{t.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTA from '../../components/CTA.astro';
+---
+<BaseLayout title="Roofing Sales Calculators — Appointment Math, ROAS, Commission" description="Free roofing sales calculators. Reverse-engineer 50 booked appts/month, model rep commission, see real marketing ROI.">
+  <section class="border-b-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-16">
+      <a href="/resources/" class="text-sm font-bold uppercase tracking-wider text-ink-600 no-underline hover:text-torch-600">← Resource library</a>
+      <h1 class="mt-3 text-5xl md:text-6xl">CALCULATORS.<br/><span class="text-torch-600">DO THE MATH.</span></h1>
+    </div>
+  </section>
+
+  <!-- Appointment Math -->
+  <section class="container-x py-12">
+    <div class="card">
+      <h2 class="text-3xl">APPOINTMENT MATH</h2>
+      <p class="mt-2 text-ink-600">How many leads, knocks, or set rate do you need to hit 50 booked appts/month?</p>
+      <div class="mt-6 grid gap-4 md:grid-cols-3">
+        <label class="block">
+          <span class="eyebrow">Target booked appts / mo</span>
+          <input id="target" type="number" value="50" class="mt-1 w-full border-2 border-ink-900 p-3 font-mono text-lg" />
+        </label>
+        <label class="block">
+          <span class="eyebrow">Set rate (lead → appt) %</span>
+          <input id="setrate" type="number" value="35" class="mt-1 w-full border-2 border-ink-900 p-3 font-mono text-lg" />
+        </label>
+        <label class="block">
+          <span class="eyebrow">Lead → knock ratio %</span>
+          <input id="knockrate" type="number" value="8" class="mt-1 w-full border-2 border-ink-900 p-3 font-mono text-lg" />
+        </label>
+      </div>
+      <div class="mt-6 grid gap-4 md:grid-cols-3 text-center">
+        <div class="card-dark"><div class="eyebrow text-torch-400">Leads / month</div><div id="leads" class="mt-2 font-display text-5xl text-torch-400">—</div></div>
+        <div class="card-dark"><div class="eyebrow text-torch-400">Leads / week</div><div id="weekly" class="mt-2 font-display text-5xl text-torch-400">—</div></div>
+        <div class="card-dark"><div class="eyebrow text-torch-400">Doors knocked / mo</div><div id="knocks" class="mt-2 font-display text-5xl text-torch-400">—</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marketing ROAS -->
+  <section class="container-x py-12">
+    <div class="card">
+      <h2 class="text-3xl">MARKETING ROAS</h2>
+      <p class="mt-2 text-ink-600">Plug in real numbers. See what your spend is actually making you.</p>
+      <div class="mt-6 grid gap-4 md:grid-cols-4">
+        <label class="block">
+          <span class="eyebrow">Monthly ad spend $</span>
+          <input id="spend" type="number" value="10000" class="mt-1 w-full border-2 border-ink-900 p-3 font-mono text-lg" />
+        </label>
+        <label class="block">
+          <span class="eyebrow">Leads from spend</span>
+          <input id="adleads" type="number" value="120" class="mt-1 w-full border-2 border-ink-900 p-3 font-mono text-lg" />
+        </label>
+        <label class="block">
+          <span class="eyebrow">Close rate %</span>
+          <input id="close" type="number" value="22" class="mt-1 w-full border-2 border-ink-900 p-3 font-mono text-lg" />
+        </label>
+        <label class="block">
+          <span class="eyebrow">Avg ticket $</span>
+          <input id="ticket" type="number" value="14500" class="mt-1 w-full border-2 border-ink-900 p-3 font-mono text-lg" />
+        </label>
+      </div>
+      <div class="mt-6 grid gap-4 md:grid-cols-3 text-center">
+        <div class="card-dark"><div class="eyebrow text-torch-400">Cost per lead</div><div id="cpl" class="mt-2 font-display text-5xl text-torch-400">—</div></div>
+        <div class="card-dark"><div class="eyebrow text-torch-400">Revenue</div><div id="rev" class="mt-2 font-display text-5xl text-torch-400">—</div></div>
+        <div class="card-dark"><div class="eyebrow text-torch-400">ROAS</div><div id="roas" class="mt-2 font-display text-5xl text-torch-400">—</div></div>
+      </div>
+    </div>
+  </section>
+
+  <CTA title="Numbers look scary?" sub="Crew Builder rebuilds your sales pipeline math from scratch and holds you accountable to hit it." cta={{ href: '/services/#crew-builder', label: 'Talk to Tyler' }} />
+
+  <script>
+    const $ = (id: string) => document.getElementById(id) as HTMLInputElement | HTMLElement;
+    const num = (id: string) => parseFloat(((document.getElementById(id) as HTMLInputElement)?.value) || '0') || 0;
+    const fmt = (n: number) => isFinite(n) ? Math.round(n).toLocaleString() : '—';
+    const money = (n: number) => isFinite(n) ? '$' + Math.round(n).toLocaleString() : '—';
+
+    function calcAppts() {
+      const target = num('target'), set = num('setrate')/100, kn = num('knockrate')/100;
+      const leads = set > 0 ? target / set : 0;
+      const knocks = kn > 0 ? leads / kn : 0;
+      ($('leads') as HTMLElement).textContent = fmt(leads);
+      ($('weekly') as HTMLElement).textContent = fmt(leads/4.3);
+      ($('knocks') as HTMLElement).textContent = fmt(knocks);
+    }
+    function calcRoas() {
+      const spend = num('spend'), leads = num('adleads'), close = num('close')/100, ticket = num('ticket');
+      const cpl = leads > 0 ? spend / leads : 0;
+      const rev = leads * close * ticket;
+      const roas = spend > 0 ? rev / spend : 0;
+      ($('cpl') as HTMLElement).textContent = money(cpl);
+      ($('rev') as HTMLElement).textContent = money(rev);
+      ($('roas') as HTMLElement).textContent = isFinite(roas) ? roas.toFixed(1) + 'x' : '—';
+    }
+    ['target','setrate','knockrate'].forEach(id => document.getElementById(id)?.addEventListener('input', calcAppts));
+    ['spend','adleads','close','ticket'].forEach(id => document.getElementById(id)?.addEventListener('input', calcRoas));
+    calcAppts(); calcRoas();
+  </script>
+</BaseLayout>

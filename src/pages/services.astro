@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CTA from '../components/CTA.astro';
+
+const tiers = [
+  {
+    name: 'Pitch Pack',
+    tagline: 'DIY. For the lone-wolf rep or owner-operator.',
+    price: '$497',
+    cadence: 'one-time',
+    features: [
+      '40+ proven scripts (D2D, retail, storm, insurance)',
+      'Objection handler swipe file (60+ rebuttals)',
+      'Self-paced video course (8 hours)',
+      'Pitch Audit AI: paste your script, get notes',
+      'Private community + monthly group call',
+    ],
+    cta: { href: '#pitch-pack', label: 'Get the Pack' },
+  },
+  {
+    name: 'Crew Builder',
+    tagline: 'Train your reps. Standardize the pitch. Build a bench.',
+    price: '$2,497',
+    cadence: '/ month',
+    features: [
+      'Weekly live coaching with Tyler',
+      'Custom pitch built for YOUR market',
+      'Ride-along recordings & rep scorecards',
+      'Hiring scorecards + interview kit',
+      'KPI dashboard + weekly accountability',
+    ],
+    cta: { href: '#crew-builder', label: 'Train the Crew' },
+  },
+  {
+    name: 'Zero to 50',
+    tagline: 'The flagship. Marketing + sales + ops. Done WITH you.',
+    price: '$25K',
+    cadence: 'setup + $5K/mo',
+    features: [
+      'Marketing engine built & launched in 21 days (w/ aaron.chat)',
+      'Custom sales system, scripts, and CRM',
+      'Tyler trains your reps in-person + weekly virtual',
+      'Performance dashboards across marketing → cash',
+      '12-month minimum • 50+ booked appts/mo guarantee',
+    ],
+    cta: { href: '/zero-to-50/', label: 'See the Program' },
+    highlight: true,
+  },
+];
+
+const matrix = [
+  ['Live coaching with Tyler', false, true, true],
+  ['Custom scripts for your market', false, true, true],
+  ['Sales scorecards + KPIs', false, true, true],
+  ['Hiring kit + interview scorecards', false, true, true],
+  ['Done-for-you marketing engine', false, false, true],
+  ['CRM build + automation', false, false, true],
+  ['In-person rep training', false, false, true],
+  ['Performance guarantee in contract', false, false, true],
+  ['aaron.chat marketing partnership', false, false, true],
+];
+---
+<BaseLayout title="Services — Roof Pitcher" description="Three ways to work with Tyler: self-serve Pitch Pack, monthly Crew Builder coaching, or the flagship Zero-to-50 done-with-you program.">
+  <section class="border-b-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-16">
+      <span class="eyebrow">Services</span>
+      <h1 class="mt-3 text-5xl md:text-6xl">PICK YOUR LANE.<br/><span class="text-torch-600">WE'LL DRIVE IT WITH YOU.</span></h1>
+      <p class="mt-4 max-w-2xl text-lg text-ink-700">Whether you're a one-truck operator or running 10 reps, there's a tier here that turns guessing into a system.</p>
+    </div>
+  </section>
+
+  <section class="container-x py-16">
+    <div class="grid gap-6 md:grid-cols-3">
+      {tiers.map(t => <ServiceCard {...t} />)}
+    </div>
+  </section>
+
+  <!-- Detail blocks -->
+  <section id="pitch-pack" class="border-y-2 border-ink-900 bg-white">
+    <div class="container-x py-16 grid gap-10 md:grid-cols-[1fr_1.4fr]">
+      <div>
+        <span class="eyebrow">Tier 1 · DIY</span>
+        <h2 class="mt-2 text-4xl">PITCH PACK</h2>
+        <div class="mt-4 font-display text-5xl text-torch-600">$497</div>
+        <a href="https://buy.stripe.com/test" class="btn-primary mt-6">Buy now</a>
+      </div>
+      <div class="space-y-4 text-ink-700">
+        <p>40+ scripts that Tyler's own reps still use today. Storm, retail, insurance, commercial, referral, follow-up.</p>
+        <p>Includes the "Objection Vault" — 60+ rebuttals organized by situation. Plus the Pitch Audit AI: paste your script in, get a marked-up coaching response in seconds.</p>
+        <p class="font-semibold">Who it's for: solo reps, owner-operators, and small crews who just need ammo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="crew-builder" class="bg-ink-100 border-b-2 border-ink-900">
+    <div class="container-x py-16 grid gap-10 md:grid-cols-[1fr_1.4fr]">
+      <div>
+        <span class="eyebrow">Tier 2 · Coached</span>
+        <h2 class="mt-2 text-4xl">CREW BUILDER</h2>
+        <div class="mt-4 font-display text-5xl text-torch-600">$2,497<span class="text-2xl text-ink-700">/mo</span></div>
+        <a href="/book/" class="btn-primary mt-6">Book a fit call</a>
+      </div>
+      <div class="space-y-4 text-ink-700">
+        <p>Tyler runs a weekly live coaching call with your team. Pitches get reviewed, ride-along recordings get scored, scripts get tuned to your market.</p>
+        <p>You get the hiring kit, the rep scorecard template, and the KPI dashboard. We hold your sales manager accountable — or play that role until you hire one.</p>
+        <p class="font-semibold">Who it's for: 3–15 reps, an owner who wants their nights back.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="zero-to-50" class="bg-ink-900 text-white border-b-2 border-ink-900">
+    <div class="container-x py-16 grid gap-10 md:grid-cols-[1fr_1.4fr]">
+      <div>
+        <span class="eyebrow text-torch-400">Flagship · Done-with-you</span>
+        <h2 class="mt-2 text-4xl text-torch-400">ZERO TO 50</h2>
+        <div class="mt-4 font-display text-5xl">$25K<span class="text-2xl text-ink-300"> setup</span></div>
+        <div class="font-display text-3xl text-ink-300">+ $5K/mo · 12 mo min</div>
+        <a href="/zero-to-50/" class="btn-primary mt-6">Full program details →</a>
+      </div>
+      <div class="space-y-4 text-ink-200">
+        <p>The whole machine. Marketing, sales, ops — built in 90 days with you and run alongside you for a year.</p>
+        <p>Marketing is fulfilled by our partner <a href="/partners/aaron-chat/" class="text-torch-400">aaron.chat</a> — SEO, local AEO, paid, and conversion infrastructure. Tyler handles sales, training, and ops cadence.</p>
+        <p>Written guarantee: 50+ booked appointments per month by month 6 — or we work for free until you hit it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare matrix -->
+  <section class="container-x py-20">
+    <h2 class="text-4xl">COMPARE EVERY FEATURE.</h2>
+    <div class="mt-8 overflow-x-auto border-2 border-ink-900 shadow-hard">
+      <table class="w-full text-left">
+        <thead class="bg-ink-900 text-white">
+          <tr>
+            <th class="px-4 py-3 text-sm uppercase">Feature</th>
+            <th class="px-4 py-3 text-sm uppercase text-center">Pitch Pack</th>
+            <th class="px-4 py-3 text-sm uppercase text-center">Crew Builder</th>
+            <th class="px-4 py-3 text-sm uppercase text-center bg-torch-500 text-ink-900">Zero to 50</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white">
+          {matrix.map((row, i) => (
+            <tr class={i % 2 === 0 ? 'bg-white' : 'bg-ink-100'}>
+              <td class="px-4 py-3 font-medium">{row[0]}</td>
+              {row.slice(1).map(v => (
+                <td class="px-4 py-3 text-center">{v ? '✓' : '—'}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

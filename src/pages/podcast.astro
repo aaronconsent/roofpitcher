@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+
+const eps = [
+  { n: 47, title: 'Why your "best rep" is actually capping your ceiling', g: 'Drew T., Stormline', len: '38 min' },
+  { n: 46, title: 'The 7-question storm knock, dissected line by line', g: 'Solo episode', len: '24 min' },
+  { n: 45, title: 'How to install a CRM and not get a mutiny', g: 'Jenna R., Summit Exteriors', len: '41 min' },
+  { n: 44, title: 'AI in roofing sales: real tools vs vendor hype', g: 'w/ aaron.chat team', len: '52 min' },
+  { n: 43, title: 'Hiring scorecards beat resumes 10/10 times', g: 'Solo episode', len: '29 min' },
+];
+---
+<BaseLayout title="The Pitcher Podcast — Roof Pitcher" description="Weekly roofing sales podcast. Real tactics, real numbers, real owners. Hosted by Tyler Mentges.">
+  <section class="border-b-2 border-ink-900 bg-ink-900 text-white">
+    <div class="container-x py-16 grid gap-10 md:grid-cols-[1.3fr_1fr] items-center">
+      <div>
+        <span class="eyebrow text-torch-400">Weekly · Tuesdays</span>
+        <h1 class="mt-3 text-6xl">THE PITCHER<br/><span class="text-torch-400">PODCAST.</span></h1>
+        <p class="mt-4 text-lg text-ink-200 max-w-xl">Tyler interviews roofing owners, sales managers, and marketers about what's actually working. No guru talk. No motivational nonsense.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#" class="btn-primary">Apple Podcasts</a>
+          <a href="#" class="btn-ghost text-ink-900">Spotify</a>
+          <a href="#" class="btn-ghost text-ink-900">YouTube</a>
+        </div>
+      </div>
+      <div class="border-2 border-torch-500 bg-ink-800 p-6">
+        <span class="eyebrow text-torch-400">Latest drop</span>
+        <h2 class="mt-2 text-2xl">Ep 47 — Why your "best rep" is capping your ceiling</h2>
+        <p class="mt-2 text-sm text-ink-300">w/ Drew T. of Stormline · 38 min</p>
+        <a href="#" class="btn-primary mt-5 w-full justify-center">▶ Play</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-16">
+    <h2 class="text-3xl">RECENT EPISODES</h2>
+    <ul class="mt-8 divide-y-2 divide-ink-200 border-2 border-ink-900 shadow-hard bg-white">
+      {eps.map(e => (
+        <li class="flex items-center justify-between gap-4 p-5 hover:bg-ink-100">
+          <div class="flex items-center gap-5">
+            <div class="font-display text-3xl text-torch-600 w-12 text-right">{e.n}</div>
+            <div>
+              <div class="font-bold">{e.title}</div>
+              <div class="text-sm text-ink-600">{e.g} · {e.len}</div>
+            </div>
+          </div>
+          <a href="#" class="btn-ghost text-sm">▶ Listen</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <CTA title="Want to be a guest?" sub="If you're a roofing owner who's done something interesting, Tyler wants you on the show." cta={{ href: '/book/', label: 'Pitch the show' }} />
+</BaseLayout>

@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ResourceCard from '../../components/ResourceCard.astro';
+import CTA from '../../components/CTA.astro';
+
+const cats = [
+  {
+    name: 'Scripts',
+    items: [
+      { title: 'The 7-Question Storm Knock', desc: "Tyler's exact opener for post-storm canvassing. Doesn't sound like a vulture.", href: '/resources/scripts/' },
+      { title: 'Retail D2D Cold Approach', desc: 'For non-storm markets. Build trust in 90 seconds, book the inspection.', href: '/resources/scripts/' },
+      { title: 'Insurance Claim Walk-Through', desc: 'Word-for-word script for explaining the claim process at the kitchen table.', href: '/resources/scripts/' },
+      { title: 'Referral Re-Engage', desc: 'How to mine past customers for 3-5 referrals without sounding desperate.', href: '/resources/scripts/' },
+    ],
+  },
+  {
+    name: 'Playbooks',
+    items: [
+      { title: 'The Storm Response Playbook', desc: '72-hour checklist for mobilizing reps when hail hits.', href: '/resources/playbooks/' },
+      { title: 'Hiring Roofing Reps That Stick', desc: 'Scorecard, interview questions, 30/60/90 plan.', href: '/resources/playbooks/' },
+      { title: 'Door Knocking 101', desc: 'For new reps. From dressing right to handling the first 10 doors.', href: '/resources/playbooks/' },
+      { title: 'The Owner Replacement Playbook', desc: 'How to get out of the truck and build a real org chart.', href: '/resources/playbooks/' },
+    ],
+  },
+  {
+    name: 'Calculators',
+    items: [
+      { title: 'Commission Plan Builder', desc: 'Model rep payouts at different splits and override structures.', href: '/resources/calculators/' },
+      { title: 'Marketing ROI Calculator', desc: 'Plug in spend, leads, close rate, ticket. See real ROAS.', href: '/resources/calculators/' },
+      { title: 'Appointment Math Calculator', desc: 'Reverse-engineer how many knocks/leads you need for 50 appts/mo.', href: '/resources/calculators/' },
+    ],
+  },
+  {
+    name: 'Technical',
+    items: [
+      { title: 'Roof Glossary for Sales Reps', desc: '120+ terms. Talk like a roofer, not a salesman.', href: '/resources/glossary/' },
+      { title: 'Shingle Brand Cheat Sheet', desc: 'GAF vs Owens vs CertainTeed — pros, cons, and pitch angles.', href: '/resources/glossary/' },
+      { title: 'Insurance Adjuster Glossary', desc: 'ACV, RCV, depreciation, scope, supplements — explained simply.', href: '/resources/glossary/' },
+    ],
+  },
+];
+---
+<BaseLayout
+  title="Free Roof Sales Resource Hub — Scripts, Playbooks, Calculators, Glossaries"
+  description="The biggest free roofing sales library on the internet. Scripts, objection handlers, calculators, hiring playbooks, and a technical glossary — all free, no email gate."
+>
+  <section class="border-b-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-20">
+      <span class="eyebrow">Free · No email gate</span>
+      <h1 class="mt-3 text-5xl md:text-7xl">THE FREE<br/>ROOF SALES<br/><span class="text-torch-600">LIBRARY.</span></h1>
+      <p class="mt-6 max-w-2xl text-lg text-ink-700">
+        Everything Tyler's reps use in the field. Scripts, objection handlers, hiring playbooks, ROI calculators, and a technical glossary for new hires. No email wall — we want this in the hands of every roofer who needs it.
+      </p>
+    </div>
+  </section>
+
+  {cats.map(cat => (
+    <section class="container-x py-14 border-b border-ink-200">
+      <div class="flex items-end justify-between">
+        <h2 class="text-4xl">{cat.name.toUpperCase()}</h2>
+        <span class="text-sm font-semibold uppercase tracking-wider text-ink-500">{cat.items.length} resources</span>
+      </div>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {cat.items.map(i => <ResourceCard category={cat.name} title={i.title} desc={i.desc} href={i.href} />)}
+      </div>
+    </section>
+  ))}
+
+  <CTA title="Want the whole vault — coached?" sub="The Pitch Pack bundles every script, handler, and calculator with a video course and AI pitch auditor." cta={{ href: '/services/#pitch-pack', label: 'Get the Pitch Pack' }} />
+</BaseLayout>

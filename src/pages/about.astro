@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+---
+<BaseLayout title="About Tyler Mentges — Roof Pitcher" description="Tyler Mentges took a 3-truck roofing operation to $22M. Now he trains crews to do the same.">
+  <section class="border-b-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-20 grid gap-10 md:grid-cols-[1fr_1.2fr] items-center">
+      <div class="border-2 border-ink-900 bg-white shadow-hard aspect-[4/5] grid place-items-center">
+        <div class="text-center p-8">
+          <div class="font-display text-7xl text-torch-500">TM</div>
+          <p class="mt-3 text-sm uppercase tracking-widest text-ink-600">Drop a real photo here</p>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">About the founder</span>
+        <h1 class="mt-3 text-5xl md:text-6xl">TYLER MENTGES.<br/><span class="text-torch-600">ROOFER FIRST. TRAINER SECOND.</span></h1>
+        <p class="mt-6 text-lg text-ink-700">
+          Tyler started in 2010 knocking storm doors in Oklahoma with $200 in his pocket and a borrowed F-150.
+          By 2018 he was COO of a multi-state operation running 47 reps and $22M in annual revenue.
+          He's now spent a decade teaching roofing owners and sales managers the exact playbook that got him there.
+        </p>
+        <p class="mt-4 text-lg text-ink-700">
+          He doesn't sell theory. He sells the system — and he'll sit in the truck with your reps to prove it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-20 grid gap-10 md:grid-cols-3">
+    {[
+      { n:'$22M', l:'Roofing revenue Tyler built before stepping out of ops' },
+      { n:'47', l:'Sales reps trained and managed in his own org' },
+      { n:'200+', l:'Roofing contractors coached across 38 states' },
+    ].map(b => (
+      <div class="card text-center">
+        <div class="font-display text-6xl text-torch-600">{b.n}</div>
+        <p class="mt-2 text-sm text-ink-700">{b.l}</p>
+      </div>
+    ))}
+  </section>
+
+  <section class="border-y-2 border-ink-900 bg-ink-900 text-white">
+    <div class="container-x py-20 grid gap-10 md:grid-cols-2">
+      <div>
+        <span class="eyebrow text-torch-400">Operating principles</span>
+        <h2 class="mt-3 text-4xl">WHAT TYLER WON'T DO.</h2>
+      </div>
+      <ul class="space-y-4 text-lg text-ink-200">
+        <li>❌ Sell a "course" and ghost you. Everything comes with live coaching.</li>
+        <li>❌ Pretend marketing and sales are separate problems. They're one machine.</li>
+        <li>❌ Push manipulative pitches. The Pitcher Method is consultative — homeowners thank reps.</li>
+        <li>❌ Promise outcomes without a written guarantee. (Yes, it's in the Zero-to-50 contract.)</li>
+      </ul>
+    </div>
+  </section>
+
+  <CTA title="Want to talk to Tyler directly?" cta={{ href: '/book/', label: 'Book the call' }} />
+</BaseLayout>

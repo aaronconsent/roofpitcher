@@ -1,0 +1,45 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  sub: string;
+  primaryCta?: { href: string; label: string };
+  secondaryCta?: { href: string; label: string };
+}
+const { eyebrow, title, sub, primaryCta, secondaryCta } = Astro.props;
+---
+<section class="relative overflow-hidden border-b-2 border-ink-900 bg-ink-100">
+  <div class="absolute inset-0 opacity-[0.04] [background-image:radial-gradient(#000_1px,transparent_1px)] [background-size:18px_18px]"></div>
+  <div class="container-x relative grid items-center gap-12 py-20 md:grid-cols-[1.2fr_1fr] md:py-28">
+    <div>
+      {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+      <h1 class="mt-3 text-5xl leading-[0.95] sm:text-6xl md:text-7xl">{title}</h1>
+      <p class="mt-6 max-w-xl text-lg text-ink-700">{sub}</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        {primaryCta && <a href={primaryCta.href} class="btn-primary">{primaryCta.label} →</a>}
+        {secondaryCta && <a href={secondaryCta.href} class="btn-ghost">{secondaryCta.label}</a>}
+      </div>
+      <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-semibold uppercase tracking-wider text-ink-600">
+        <span>★★★★★ 4.9 from 200+ reps</span>
+        <span>•</span>
+        <span>Trained crews in 38 states</span>
+        <span>•</span>
+        <span>Avg close-rate lift: <span class="text-torch-600">+27%</span></span>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="card-dark relative">
+        <div class="absolute -top-3 -left-3 stripe h-6 w-24"></div>
+        <span class="eyebrow text-torch-400">The Promise</span>
+        <h3 class="mt-2 text-3xl">0 → 50+ booked appointments / month</h3>
+        <ul class="mt-5 space-y-3 text-sm text-ink-200">
+          <li class="flex gap-3"><span class="text-torch-400">▶</span> Marketing engine built & launched in 21 days</li>
+          <li class="flex gap-3"><span class="text-torch-400">▶</span> Sales scripts, objection handlers, and ride-alongs</li>
+          <li class="flex gap-3"><span class="text-torch-400">▶</span> KPI dashboard that tells you what to fix tomorrow</li>
+          <li class="flex gap-3"><span class="text-torch-400">▶</span> Weekly live coaching with Tyler himself</li>
+        </ul>
+        <a href="/zero-to-50/" class="btn-primary mt-6 w-full justify-center">See the Program →</a>
+      </div>
+    </div>
+  </div>
+</section>

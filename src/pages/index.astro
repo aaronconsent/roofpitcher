@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import StatBar from '../components/StatBar.astro';
+import LogoBar from '../components/LogoBar.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import Testimonial from '../components/Testimonial.astro';
+import CTA from '../components/CTA.astro';
+
+const services = [
+  {
+    name: 'Pitch Pack',
+    tagline: 'DIY. For the lone-wolf rep or owner-operator.',
+    price: '$497',
+    cadence: 'one-time',
+    features: [
+      '40+ proven scripts (D2D, retail, storm, insurance)',
+      'Objection handler swipe file (60+ rebuttals)',
+      'Self-paced video course (8 hours)',
+      'Pitch Audit AI: paste your script, get notes',
+      'Private community + monthly group call',
+    ],
+    cta: { href: '/services/#pitch-pack', label: 'Get the Pack' },
+  },
+  {
+    name: 'Crew Builder',
+    tagline: 'Train your reps. Standardize your pitch. Build a bench.',
+    price: '$2,497',
+    cadence: '/ month',
+    features: [
+      'Weekly live coaching with Tyler',
+      'Custom pitch built for YOUR market',
+      'Ride-along recordings & rep scorecards',
+      'Hiring scorecards + interview kit',
+      'KPI dashboard + weekly accountability',
+    ],
+    cta: { href: '/services/#crew-builder', label: 'Train the Crew' },
+  },
+  {
+    name: 'Zero to 50',
+    tagline: 'The flagship. Marketing + sales + ops. Done WITH you.',
+    price: '$25K',
+    cadence: 'setup + $5K/mo',
+    features: [
+      'Marketing engine built & launched in 21 days (w/ aaron.chat)',
+      'Custom sales system, scripts, and CRM',
+      'Tyler trains your reps in-person + weekly virtual',
+      'Performance dashboards across marketing → cash',
+      '12-month minimum • 50+ booked appts/mo guarantee',
+    ],
+    cta: { href: '/zero-to-50/', label: 'See the Program' },
+    highlight: true,
+  },
+];
+---
+<BaseLayout>
+  <Hero
+    eyebrow="Roof sales training × marketing × ops"
+    title="SELL MORE ROOFS. FASTER. WITH A SYSTEM."
+    sub="Tyler Mentges has trained crews to add 8-figures to their pipeline. Roof Pitcher gives you the scripts, the marketing engine, and the coaching to take a roofing company from zero booked appointments to 50+ per month — without praying for storms."
+    primaryCta={{ href: '/zero-to-50/', label: 'Get to 50 Appts/Month' }}
+    secondaryCta={{ href: '/resources/', label: 'Free Resource Hub' }}
+  />
+
+  <LogoBar />
+  <StatBar />
+
+  <!-- Problem / Promise -->
+  <section class="container-x py-20">
+    <div class="grid gap-10 md:grid-cols-2">
+      <div>
+        <span class="eyebrow">Sound familiar?</span>
+        <h2 class="mt-3 text-4xl">YOU DON'T HAVE A SALES PROBLEM.<br/><span class="text-torch-600">YOU HAVE A SYSTEM PROBLEM.</span></h2>
+      </div>
+      <ul class="space-y-4 text-lg">
+        <li class="border-l-4 border-torch-500 pl-4">Leads come in waves — feast or famine, all weather-dependent.</li>
+        <li class="border-l-4 border-torch-500 pl-4">Reps wing the pitch. Close rate depends on who knocks.</li>
+        <li class="border-l-4 border-torch-500 pl-4">No real KPIs. You "feel" how the month is going.</li>
+        <li class="border-l-4 border-torch-500 pl-4">Marketing spend is a black hole. Nobody can prove ROI.</li>
+        <li class="border-l-4 border-torch-500 pl-4">Hiring is a coin flip and onboarding is a 3-month prayer.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- The Pitcher Method -->
+  <section class="border-y-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-20">
+      <div class="max-w-2xl">
+        <span class="eyebrow">The Pitcher Method™</span>
+        <h2 class="mt-3 text-5xl">FOUR INNINGS. ONE WIN.</h2>
+        <p class="mt-4 text-lg text-ink-700">The same system Tyler used to take a 3-truck operation to 47 reps and $22M. Run it in order. Don't skip innings.</p>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-4">
+        {[
+          { n:'01', t:'DIAL IN', d:'Audit your numbers, your offer, your market. Pick a beachhead neighborhood and ICP.' },
+          { n:'02', t:'BUILD THE ENGINE', d:'Marketing channels (paid, SEO, D2D, referral) plug into a CRM that doesn’t lose leads.' },
+          { n:'03', t:'ARM THE REPS', d:'Scripts, objection handlers, ride-alongs. Pitch certified before they touch a real door.' },
+          { n:'04', t:'COMPOUND', d:'Weekly scorecards, ride-along reviews, hiring funnel. Replace yourself out of the truck.' }
+        ].map(s => (
+          <div class="card">
+            <div class="font-display text-3xl text-torch-500">{s.n}</div>
+            <h3 class="mt-2 text-xl">{s.t}</h3>
+            <p class="mt-2 text-sm text-ink-700">{s.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="container-x py-20">
+    <div class="flex items-end justify-between gap-6 flex-wrap">
+      <div>
+        <span class="eyebrow">Pick your weapon</span>
+        <h2 class="mt-3 text-5xl">THREE WAYS TO WORK<br/>WITH ROOF PITCHER.</h2>
+      </div>
+      <a href="/services/" class="btn-ghost">Compare all features →</a>
+    </div>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      {services.map(s => <ServiceCard {...s} />)}
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="border-y-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-20">
+      <span class="eyebrow">Crews that compound</span>
+      <h2 class="mt-3 text-5xl">RECEIPTS, NOT PROMISES.</h2>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <Testimonial
+          quote="We went from 12 booked appts a month to 63 in the first quarter. Tyler doesn't just teach — he sits in the truck."
+          author="Marcus D."
+          role="Owner, Apex Roofing (TX)"
+          result="+425% appts"
+        />
+        <Testimonial
+          quote="The Pitcher Method made our pitch consistent across 9 reps. Close rate jumped from 19% to 34% in 8 weeks."
+          author="Jenna R."
+          role="Sales Manager, Summit Exteriors (CO)"
+          result="+15pt close"
+        />
+        <Testimonial
+          quote="The marketing partner Tyler brought in is the secret weapon. We stopped chasing storms and started running a real business."
+          author="Drew T."
+          role="Founder, Stormline (FL)"
+          result="$2.1M ARR"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Resource Hub tease -->
+  <section class="container-x py-20">
+    <div class="grid gap-10 md:grid-cols-[1.3fr_1fr] items-end">
+      <div>
+        <span class="eyebrow">Free, forever</span>
+        <h2 class="mt-3 text-5xl">THE BIGGEST FREE ROOF SALES<br/>LIBRARY ON THE INTERNET.</h2>
+        <p class="mt-4 max-w-2xl text-lg text-ink-700">
+          Scripts. Objection handlers. Commission calculators. Insurance claim cheat sheets. A glossary for new hires. We give it away because we want every blue-collar crew to have a fair shot at building a real business.
+        </p>
+        <a href="/resources/" class="btn-dark mt-6">Open the Library →</a>
+      </div>
+      <div class="card-dark">
+        <span class="eyebrow text-torch-400">This week's drop</span>
+        <h3 class="mt-2 text-2xl">"The 7-Question Storm Door Knock"</h3>
+        <p class="mt-2 text-sm text-ink-200">Tyler's exact storm-area opener. Books appointments without sounding like a vulture.</p>
+        <a href="/resources/scripts/" class="btn-primary mt-5 w-full justify-center">Steal It →</a>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</BaseLayout>

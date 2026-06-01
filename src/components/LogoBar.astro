@@ -1,0 +1,11 @@
+---
+const names = ['Apex Roofing', 'Summit Exteriors', 'Ironclad Roof Co.', 'Stormline', 'Crown Peak', 'BlueRidge R&R', 'Hammerhead', 'Cedar & Co.'];
+---
+<section class="border-b-2 border-ink-900 bg-white">
+  <div class="container-x py-8">
+    <p class="text-center text-xs font-bold uppercase tracking-[0.3em] text-ink-500">Trusted by crews from Florida to Alaska</p>
+    <div class="mt-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-ink-700">
+      {names.map(n => <span class="font-display text-xl tracking-wider opacity-70">{n}</span>)}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+---
+const links = [
+  { href: '/services/', label: 'Services' },
+  { href: '/zero-to-50/', label: 'Zero to 50', flag: true },
+  { href: '/resources/', label: 'Free Resources' },
+  { href: '/case-studies/', label: 'Wins' },
+  { href: '/podcast/', label: 'Podcast' },
+  { href: '/about/', label: 'About Tyler' },
+];
+const path = Astro.url.pathname;
+---
+<header class="sticky top-0 z-50 border-b-2 border-ink-900 bg-white/95 backdrop-blur">
+  <div class="container-x flex h-16 items-center justify-between gap-6">
+    <a href="/" class="flex items-center gap-2 no-underline">
+      <span class="grid h-9 w-9 place-items-center bg-torch-500 border-2 border-ink-900 font-display text-lg">RP</span>
+      <span class="font-display text-xl tracking-tight">ROOF PITCHER</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-1">
+      {links.map(l => (
+        <a href={l.href}
+           class:list={[
+             'px-3 py-2 text-sm font-semibold uppercase tracking-wide no-underline',
+             path.startsWith(l.href) ? 'text-torch-600' : 'text-ink-900 hover:text-torch-600',
+             l.flag && 'border-2 border-ink-900 bg-torch-500'
+           ]}>
+          {l.label}
+        </a>
+      ))}
+    </nav>
+    <a href="/book/" class="btn-dark text-sm hidden sm:inline-flex">Book a Call</a>
+    <button id="mobile-toggle" class="md:hidden border-2 border-ink-900 px-3 py-2 font-bold" aria-label="Menu">≡</button>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden border-t-2 border-ink-900 bg-white">
+    <div class="container-x flex flex-col py-2">
+      {links.map(l => (
+        <a href={l.href} class="py-2 font-semibold uppercase no-underline">{l.label}</a>
+      ))}
+      <a href="/book/" class="btn-primary my-3">Book a Call</a>
+    </div>
+  </div>
+</header>
+<script>
+  const btn = document.getElementById('mobile-toggle');
+  const menu = document.getElementById('mobile-menu');
+  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+</script>

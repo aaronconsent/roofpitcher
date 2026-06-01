@@ -1,0 +1,18 @@
+---
+const stats = [
+  { n: '50+', label: 'Booked appts / month target' },
+  { n: '+27%', label: 'Avg close rate lift' },
+  { n: '$7.5K', label: 'Avg ticket increase' },
+  { n: '21 days', label: 'To launched marketing' },
+];
+---
+<section class="border-b-2 border-ink-900 bg-ink-900 text-white">
+  <div class="container-x grid grid-cols-2 divide-x divide-ink-700 md:grid-cols-4">
+    {stats.map(s => (
+      <div class="px-4 py-8 text-center">
+        <div class="font-display text-4xl text-torch-400 md:text-5xl">{s.n}</div>
+        <div class="mt-2 text-xs font-semibold uppercase tracking-wider text-ink-300">{s.label}</div>
+      </div>
+    ))}
+  </div>
+</section>

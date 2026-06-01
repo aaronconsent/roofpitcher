@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+import StatBar from '../components/StatBar.astro';
+
+const phases = [
+  { p: 'Days 1–21', t: 'Foundation', d: 'Audit your numbers, your offer, and your CRM. Build local SEO + AEO pages, set up paid channels, install lead routing. Tyler designs the rep pitch for your exact market.' },
+  { p: 'Days 22–60', t: 'Engine On', d: 'Marketing engine launches. Reps go through Pitcher Method training and certification. Ride-alongs begin. CRM goes live with dashboards from marketing → cash.' },
+  { p: 'Days 61–180', t: 'Scale', d: 'Weekly coaching, hiring funnel ramps, paid channels optimize, content compounds. Target: 50+ booked appointments per month by day 180. Written into the contract.' },
+  { p: 'Months 7–12', t: 'Compound', d: 'Replace yourself out of the truck. Sales manager developed. Marketing on autopilot. KPIs reviewed weekly. You become the owner you wanted to be.' },
+];
+---
+<BaseLayout
+  title="Zero to 50 — Roof Pitcher's flagship program with aaron.chat"
+  description="Marketing + sales + ops, built and run with you. 50+ booked appointments per month guaranteed by month 6. $25K setup + $5K/mo, 12 month minimum."
+>
+  <section class="relative border-b-2 border-ink-900 bg-ink-900 text-white">
+    <div class="stripe absolute inset-x-0 top-0 h-3"></div>
+    <div class="container-x py-20 grid gap-12 md:grid-cols-[1.2fr_1fr] items-center">
+      <div>
+        <span class="eyebrow text-torch-400">The flagship program</span>
+        <h1 class="mt-3 text-6xl md:text-7xl">ZERO<br/>TO 50<br/><span class="text-torch-500">IN SIX MONTHS.</span></h1>
+        <p class="mt-6 text-lg text-ink-200 max-w-xl">
+          A done-with-you launch program for roofing contractors who want to stop praying for storms and start running a real growth machine. We build the marketing. We train the reps. We install the ops. You run the company.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/book/" class="btn-primary">Apply for a Spot →</a>
+          <a href="#program" class="btn-ghost text-ink-900">See the program</a>
+        </div>
+        <p class="mt-4 text-xs text-ink-400">We take ≤6 new clients per quarter. Application required.</p>
+      </div>
+      <div class="border-2 border-torch-500 p-7 bg-ink-800">
+        <span class="eyebrow text-torch-400">The Guarantee</span>
+        <h2 class="mt-2 text-3xl">50+ booked appointments / month by day 180.</h2>
+        <p class="mt-3 text-sm text-ink-300">Or we work for free until you hit it. Written into the contract. Yes, really.</p>
+        <div class="mt-6 border-t border-ink-700 pt-5 grid grid-cols-2 gap-4">
+          <div>
+            <div class="font-display text-3xl text-torch-400">$25K</div>
+            <div class="text-xs uppercase tracking-wider text-ink-400">Build phase</div>
+          </div>
+          <div>
+            <div class="font-display text-3xl text-torch-400">$5K/mo</div>
+            <div class="text-xs uppercase tracking-wider text-ink-400">12 month min</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <StatBar />
+
+  <!-- Program phases -->
+  <section id="program" class="container-x py-20">
+    <span class="eyebrow">The 12-month plan</span>
+    <h2 class="mt-3 text-5xl">FOUR PHASES.<br/><span class="text-torch-600">ONE MACHINE.</span></h2>
+    <div class="mt-12 grid gap-6 md:grid-cols-2">
+      {phases.map((ph, i) => (
+        <div class="card relative">
+          <div class="absolute -top-4 -left-4 bg-torch-500 border-2 border-ink-900 px-3 py-1 font-display text-lg">{String(i+1).padStart(2,'0')}</div>
+          <div class="text-xs font-bold uppercase tracking-wider text-ink-500">{ph.p}</div>
+          <h3 class="mt-1 text-3xl">{ph.t}</h3>
+          <p class="mt-3 text-ink-700">{ph.d}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Partner section -->
+  <section class="border-y-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-20 grid gap-10 md:grid-cols-[1fr_1.3fr] items-center">
+      <div>
+        <span class="eyebrow">Marketing partner</span>
+        <h2 class="mt-3 text-4xl">POWERED BY<br/><span class="text-torch-600">AARON.CHAT</span></h2>
+        <a href="/partners/aaron-chat/" class="btn-dark mt-6">About the partnership</a>
+      </div>
+      <div class="space-y-4 text-ink-700 text-lg">
+        <p>Sales training without marketing is a Ferrari with no gas. That's why every Zero-to-50 client gets a full marketing engine fulfilled by our partner aaron.chat.</p>
+        <ul class="space-y-2 text-base">
+          <li>🛰️ Local SEO + AEO (the AI search era is here)</li>
+          <li>🎯 Paid channels: Meta, Google, YouTube, Nextdoor</li>
+          <li>📞 Lead capture, routing, and instant-call infrastructure</li>
+          <li>🧠 Conversion content: case studies, before/afters, video proof</li>
+          <li>📊 Single dashboard from spend → booked appointment → cash</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who it's for -->
+  <section class="container-x py-20 grid gap-10 md:grid-cols-2">
+    <div>
+      <span class="eyebrow text-torch-600">Good fit if</span>
+      <h3 class="mt-2 text-3xl">YOU'RE READY TO BUILD A REAL BUSINESS.</h3>
+      <ul class="mt-5 space-y-3 text-ink-700">
+        <li>✓ Doing $500K–$5M, want to break $5–20M</li>
+        <li>✓ At least 1 truck + 1 rep besides the owner</li>
+        <li>✓ Willing to install a CRM and actually use it</li>
+        <li>✓ Will show up to weekly coaching, do the homework</li>
+      </ul>
+    </div>
+    <div>
+      <span class="eyebrow text-ink-500">Not a fit if</span>
+      <h3 class="mt-2 text-3xl">YOU WANT A SILVER BULLET.</h3>
+      <ul class="mt-5 space-y-3 text-ink-700">
+        <li>✗ Looking for "leads only" — buy them elsewhere</li>
+        <li>✗ Want a course, not a coach</li>
+        <li>✗ Won't standardize the pitch across reps</li>
+        <li>✗ Brand new, no operational capacity to handle 50 appts/mo</li>
+      </ul>
+    </div>
+  </section>
+
+  <CTA title="Apply for the next cohort." sub="Only 6 spots per quarter. Application + fit call required before contract." cta={{ href: '/book/', label: 'Start the application' }} />
+</BaseLayout>

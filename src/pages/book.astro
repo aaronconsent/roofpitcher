@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Book a Pitch Audit — Roof Pitcher" description="Book a free 15-minute Pitch Audit with Tyler. We listen to one rep and show you the fix.">
+  <section class="border-b-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-16">
+      <span class="eyebrow">Free · 15 minutes · No pitch</span>
+      <h1 class="mt-3 text-5xl md:text-6xl">BOOK THE<br/><span class="text-torch-600">PITCH AUDIT.</span></h1>
+      <p class="mt-4 max-w-2xl text-lg text-ink-700">Send us a recording of one rep at a kitchen table (or a door). Tyler reviews it, gives you 3 things to fix, and tells you whether Roof Pitcher is the right next step. No obligation.</p>
+    </div>
+  </section>
+
+  <section class="container-x py-16 grid gap-10 md:grid-cols-[1.2fr_1fr]">
+    <form class="card space-y-5" action="https://formspree.io/f/REPLACE_ME" method="POST">
+      <div>
+        <label class="eyebrow">Name</label>
+        <input required name="name" class="mt-1 w-full border-2 border-ink-900 p-3" />
+      </div>
+      <div class="grid gap-5 md:grid-cols-2">
+        <div>
+          <label class="eyebrow">Email</label>
+          <input required type="email" name="email" class="mt-1 w-full border-2 border-ink-900 p-3" />
+        </div>
+        <div>
+          <label class="eyebrow">Mobile</label>
+          <input required name="phone" class="mt-1 w-full border-2 border-ink-900 p-3" />
+        </div>
+      </div>
+      <div>
+        <label class="eyebrow">Company + state</label>
+        <input required name="company" class="mt-1 w-full border-2 border-ink-900 p-3" />
+      </div>
+      <div>
+        <label class="eyebrow">Approx annual revenue</label>
+        <select name="revenue" class="mt-1 w-full border-2 border-ink-900 p-3 bg-white">
+          <option>Under $500K</option>
+          <option>$500K–$2M</option>
+          <option>$2M–$5M</option>
+          <option>$5M–$20M</option>
+          <option>$20M+</option>
+        </select>
+      </div>
+      <div>
+        <label class="eyebrow">What's the #1 thing slowing you down?</label>
+        <textarea name="problem" rows="4" class="mt-1 w-full border-2 border-ink-900 p-3"></textarea>
+      </div>
+      <button class="btn-primary w-full justify-center">Request the Pitch Audit →</button>
+      <p class="text-xs text-ink-500">We reply within one business day. Replace the form action with your Formspree / Cal.com / HubSpot endpoint.</p>
+    </form>
+
+    <aside class="space-y-6">
+      <div class="card-dark">
+        <span class="eyebrow text-torch-400">What you get on the call</span>
+        <ul class="mt-3 space-y-3 text-ink-200">
+          <li>✓ 3 specific things hurting your close rate, right now</li>
+          <li>✓ A one-page "next 30 days" cheat sheet, emailed after</li>
+          <li>✓ Honest read on which Roof Pitcher tier (if any) fits</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="eyebrow">Prefer to just text Tyler?</span>
+        <p class="mt-2 text-ink-700">Text <strong class="font-mono">PITCH</strong> to <strong class="font-mono">(555) 010-ROOF</strong>. Real human, usually replies same day.</p>
+      </div>
+    </aside>
+  </section>
+</BaseLayout>

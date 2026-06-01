@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://roofpitcher.com/sitemap-index.xml

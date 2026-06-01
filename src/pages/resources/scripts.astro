@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTA from '../../components/CTA.astro';
+
+const scripts = [
+  {
+    name: 'The 7-Question Storm Knock',
+    when: 'Post-hail or wind event, within 14 days',
+    why: 'Consultative, not pushy. Disarms the "I already had someone here" objection by acting like an inspector, not a closer.',
+    lines: [
+      "Hey, I'm [Name] with Roof Pitcher. I'm not here to sell you anything — I'm doing free 60-second damage checks on this street after the storm Tuesday.",
+      "Have you had anyone up there yet? *(if yes)* Cool, did they leave you a written scope? *(if no)* Got it.",
+      "I'll grab a ladder, take 3-4 photos, and show you what I find. If there's nothing, I'll tell you nothing. Sound fair?",
+      "*(after inspection)* Here's what I found. Two options: file a claim, or do nothing. Want me to walk you through what filing looks like?",
+    ],
+  },
+  {
+    name: 'Retail D2D Cold Approach',
+    when: 'Non-storm markets, planned canvass route',
+    why: 'Builds trust in 90 seconds without using fake urgency. Books inspections, not sales.',
+    lines: [
+      "Hey, I'm [Name] with Roof Pitcher. I'm in the neighborhood today because we just finished a roof at [nearby address] — wanted to introduce ourselves to the block.",
+      "Quick question — when's the last time anyone looked at your roof?",
+      "*(if 'a while')* Mind if I take 10 minutes, snap some photos, and let you know if it's got 2 years or 12 left? Free, no obligation.",
+    ],
+  },
+  {
+    name: 'Insurance Claim Walk-Through',
+    when: 'Kitchen table, after a confirmed inspection finds damage',
+    why: "Demystifies the claim process. Homeowners feel informed, not sold to. Filed-claim rate goes up.",
+    lines: [
+      "Here's how this works. You call your insurer and report 'possible storm damage' — don't say roof yet, that flags it differently.",
+      "They send an adjuster. I'll be here when the adjuster comes — that's normal and they expect it.",
+      "If the claim is approved, your out-of-pocket is your deductible. That's it. We handle the scope, the supplements, the install.",
+      "Worst case? They deny it. Costs you nothing. Want me to help you make the call right now?",
+    ],
+  },
+];
+---
+<BaseLayout title="Free Roofing Sales Scripts — Roof Pitcher" description="Tyler Mentges' actual field scripts: storm door knock, retail cold approach, insurance walk-through. Free, no email required.">
+  <section class="border-b-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-16">
+      <a href="/resources/" class="text-sm font-bold uppercase tracking-wider text-ink-600 no-underline hover:text-torch-600">← Resource library</a>
+      <h1 class="mt-3 text-5xl md:text-6xl">SCRIPTS.<br/><span class="text-torch-600">REAL ONES.</span></h1>
+      <p class="mt-4 max-w-2xl text-lg text-ink-700">These aren't sanitized course scripts. These are what Tyler's reps say at the door this week.</p>
+    </div>
+  </section>
+
+  <section class="container-x py-16 space-y-12">
+    {scripts.map(s => (
+      <article class="card">
+        <h2 class="text-3xl">{s.name}</h2>
+        <div class="mt-3 grid gap-2 text-sm md:grid-cols-2">
+          <div><span class="eyebrow">When to use</span><div class="mt-1 text-ink-700">{s.when}</div></div>
+          <div><span class="eyebrow">Why it works</span><div class="mt-1 text-ink-700">{s.why}</div></div>
+        </div>
+        <div class="mt-6 border-l-4 border-torch-500 bg-ink-100 p-5 font-mono text-sm space-y-3">
+          {s.lines.map(l => <p>{l}</p>)}
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <CTA title="Want 37 more scripts + AI pitch audits?" cta={{ href: '/services/#pitch-pack', label: 'Get the full Pitch Pack' }} />
+</BaseLayout>

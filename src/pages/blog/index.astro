@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTA from '../../components/CTA.astro';
+
+const posts = [
+  { slug: '#', title: 'Why your close rate is 19% (and the 3 fixes)', date: 'May 28, 2026', read: '6 min', cat: 'Sales' },
+  { slug: '#', title: 'AI Overviews and AEO: what roofers need to know in 2026', date: 'May 21, 2026', read: '8 min', cat: 'Marketing' },
+  { slug: '#', title: 'The honest math on door knocking ROI', date: 'May 14, 2026', read: '5 min', cat: 'Sales' },
+  { slug: '#', title: 'How to fire a sales rep without blowing up morale', date: 'May 07, 2026', read: '4 min', cat: 'Ops' },
+  { slug: '#', title: 'Storm chasing is dying. Here\'s what replaces it.', date: 'Apr 30, 2026', read: '7 min', cat: 'Strategy' },
+  { slug: '#', title: 'CRM showdown: JobNimbus vs AccuLynx vs Roofr (2026)', date: 'Apr 23, 2026', read: '10 min', cat: 'Tools' },
+];
+---
+<BaseLayout title="Field Notes — Roof Pitcher Blog" description="Sales, marketing, ops, and hiring articles for roofing owners and sales managers. By Tyler Mentges.">
+  <section class="border-b-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-16">
+      <span class="eyebrow">Field notes</span>
+      <h1 class="mt-3 text-5xl md:text-6xl">FROM THE TRUCK.</h1>
+      <p class="mt-4 max-w-2xl text-lg text-ink-700">No fluff posts. No SEO-bait listicles. Just what's actually working in roofing sales right now.</p>
+    </div>
+  </section>
+
+  <section class="container-x py-16">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {posts.map(p => (
+        <a href={p.slug} class="card hover:shadow-hard transition-transform hover:-translate-y-1 no-underline">
+          <span class="eyebrow">{p.cat}</span>
+          <h2 class="mt-2 text-2xl text-ink-900">{p.title}</h2>
+          <div class="mt-4 flex items-center justify-between text-xs font-semibold uppercase tracking-wider text-ink-500">
+            <span>{p.date}</span><span>{p.read} read</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <CTA title="Subscribe — one email a week. Cancel any time." cta={{ href: '/book/', label: 'Subscribe' }} />
+</BaseLayout>

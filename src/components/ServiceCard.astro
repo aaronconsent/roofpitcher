@@ -1,0 +1,36 @@
+---
+interface Props {
+  name: string;
+  tagline: string;
+  price: string;
+  cadence?: string;
+  features: string[];
+  cta: { href: string; label: string };
+  highlight?: boolean;
+}
+const { name, tagline, price, cadence, features, cta, highlight } = Astro.props;
+---
+<div class:list={[
+  'relative flex flex-col border-2 border-ink-900 p-7 shadow-hard',
+  highlight ? 'bg-ink-900 text-white' : 'bg-white'
+]}>
+  {highlight && (
+    <span class="absolute -top-4 left-6 bg-torch-500 border-2 border-ink-900 px-3 py-1 text-xs font-bold uppercase">
+      Flagship
+    </span>
+  )}
+  <h3 class={highlight ? 'text-3xl text-torch-400' : 'text-3xl'}>{name}</h3>
+  <p class={highlight ? 'mt-2 text-sm text-ink-300' : 'mt-2 text-sm text-ink-600'}>{tagline}</p>
+  <div class="mt-5 flex items-baseline gap-2">
+    <span class="font-display text-4xl">{price}</span>
+    {cadence && <span class="text-sm opacity-70">{cadence}</span>}
+  </div>
+  <ul class={highlight ? 'mt-5 space-y-2 text-sm text-ink-200' : 'mt-5 space-y-2 text-sm text-ink-700'}>
+    {features.map(f => (
+      <li class="flex gap-2"><span class="text-torch-500">✓</span><span>{f}</span></li>
+    ))}
+  </ul>
+  <a href={cta.href} class:list={['mt-7', highlight ? 'btn-primary' : 'btn-dark', 'justify-center']}>
+    {cta.label} →
+  </a>
+</div>

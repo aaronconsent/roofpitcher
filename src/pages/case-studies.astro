@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTA from '../components/CTA.astro';
+
+const studies = [
+  {
+    company: 'Apex Roofing',
+    location: 'Houston, TX',
+    program: 'Zero to 50',
+    duration: '7 months',
+    headline: 'From 12 booked appts/mo to 63. While the owner stepped out of the truck.',
+    before: { revenue: '$1.4M', reps: 3, close: '21%', appts: 12 },
+    after:  { revenue: '$4.2M run rate', reps: 9, close: '37%', appts: 63 },
+    quote: '"Tyler didn\'t just train us — he sat in the truck and showed us. The aaron.chat marketing finally gave my reps something to do besides door-knock the same neighborhoods."',
+    attribution: 'Marcus D., Owner',
+  },
+  {
+    company: 'Summit Exteriors',
+    location: 'Denver, CO',
+    program: 'Crew Builder',
+    duration: '4 months',
+    headline: 'Standardized the pitch across 9 reps. Close rate jumped 15 points.',
+    before: { revenue: '$2.8M', reps: 9, close: '19%', appts: 38 },
+    after:  { revenue: '$4.6M run rate', reps: 11, close: '34%', appts: 51 },
+    quote: '"Before, every rep had their own pitch. Some good, some not. Now we sound like one company. The weekly coaching call is non-negotiable."',
+    attribution: 'Jenna R., Sales Manager',
+  },
+  {
+    company: 'Stormline',
+    location: 'Tampa, FL',
+    program: 'Zero to 50',
+    duration: '11 months',
+    headline: 'Built a $2.1M ARR business in under a year. Stopped chasing storms.',
+    before: { revenue: '$280K', reps: 2, close: '24%', appts: 8 },
+    after:  { revenue: '$2.1M ARR', reps: 6, close: '31%', appts: 54 },
+    quote: '"We were storm chasers. Now we\'re a real business with predictable leads, predictable close rates, and predictable revenue. Don\'t miss the old life."',
+    attribution: 'Drew T., Founder',
+  },
+];
+---
+<BaseLayout title="Case Studies — Roof Pitcher" description="Real roofing companies, real numbers. See exactly what Roof Pitcher's Zero to 50 and Crew Builder programs delivered.">
+  <section class="border-b-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-16">
+      <span class="eyebrow">Wins</span>
+      <h1 class="mt-3 text-5xl md:text-6xl">RECEIPTS.<br/><span class="text-torch-600">REAL NUMBERS.</span></h1>
+    </div>
+  </section>
+
+  <section class="container-x py-16 space-y-12">
+    {studies.map(s => (
+      <article class="border-2 border-ink-900 shadow-hard bg-white">
+        <header class="border-b-2 border-ink-900 bg-ink-900 text-white px-6 py-5 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h2 class="text-3xl text-torch-400">{s.company}</h2>
+            <div class="text-sm text-ink-300">{s.location} · {s.program} · {s.duration}</div>
+          </div>
+          <a href="/book/" class="btn-primary text-sm">Replicate this →</a>
+        </header>
+        <div class="p-6 grid gap-8 md:grid-cols-[1.5fr_1fr]">
+          <div>
+            <p class="text-2xl font-display">{s.headline}</p>
+            <blockquote class="mt-6 border-l-4 border-torch-500 pl-4 text-lg text-ink-700">{s.quote}</blockquote>
+            <p class="mt-2 text-sm font-bold uppercase tracking-wider">— {s.attribution}</p>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="card-dark"><div class="eyebrow text-ink-300">Before</div>
+              <ul class="mt-2 space-y-1 text-sm text-ink-200">
+                <li>Revenue: {s.before.revenue}</li><li>Reps: {s.before.reps}</li>
+                <li>Close: {s.before.close}</li><li>Appts/mo: {s.before.appts}</li>
+              </ul>
+            </div>
+            <div class="card border-torch-500"><div class="eyebrow">After</div>
+              <ul class="mt-2 space-y-1 text-sm">
+                <li>Revenue: <strong>{s.after.revenue}</strong></li><li>Reps: <strong>{s.after.reps}</strong></li>
+                <li>Close: <strong>{s.after.close}</strong></li><li>Appts/mo: <strong>{s.after.appts}</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <CTA />
+</BaseLayout>

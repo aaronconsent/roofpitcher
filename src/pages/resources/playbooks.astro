@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTA from '../../components/CTA.astro';
+
+const plays = [
+  {
+    title: 'The Storm Response Playbook',
+    sub: '72-hour mobilization when hail hits.',
+    steps: [
+      'Hour 0–6: Pull NOAA hail maps. Identify zip codes with ≥1.25" stones.',
+      'Hour 6–12: Adjust paid campaigns to target those zips. Geofence Meta + Google.',
+      'Hour 12–24: Deploy canvassing crews to the worst-hit neighborhoods first.',
+      'Day 2–3: Door knock with the 7-Question Storm script. Book inspections within 7 days.',
+      'Week 1: Triage filed claims. Get on the adjuster schedule. Stack the pipeline.',
+    ],
+  },
+  {
+    title: 'Hiring Roofing Reps That Stick',
+    sub: 'Stop hiring resumes. Start hiring scorecards.',
+    steps: [
+      'Define the role on one page: outcomes, KPIs, comp plan, ramp expectations.',
+      'Screen with a 15-min phone interview against 5 must-haves (not the resume).',
+      'Working interview: have them shadow a real ride-along. Watch them, not their words.',
+      'Reference: ask the last manager "would you re-hire? 1–10, why?" and shut up.',
+      '30/60/90 plan signed on day 1. Clear ramp gates. Cut fast at 60 if scorecard is red.',
+    ],
+  },
+  {
+    title: 'The Owner Replacement Playbook',
+    sub: 'Get out of the truck. Build the org chart.',
+    steps: [
+      'Time-track yourself for 2 weeks. Categorize every hour: sales, ops, marketing, finance, fire.',
+      'Identify your $25/hr tasks. Hire a VA for those first ($800/mo).',
+      'Promote your best rep to sales manager with a 90-day playbook. Pay for results.',
+      'Install weekly L10 meeting (90 min, same agenda every week).',
+      'Replace yourself in sales last. Hire a closer at 8% override before you stop selling.',
+    ],
+  },
+];
+---
+<BaseLayout title="Free Roofing Playbooks — Storm Response, Hiring, Owner Replacement" description="Operational playbooks for roofing companies. Storm mobilization, rep hiring, owner replacement. Free.">
+  <section class="border-b-2 border-ink-900 bg-ink-100">
+    <div class="container-x py-16">
+      <a href="/resources/" class="text-sm font-bold uppercase tracking-wider text-ink-600 no-underline hover:text-torch-600">← Resource library</a>
+      <h1 class="mt-3 text-5xl md:text-6xl">PLAYBOOKS.<br/><span class="text-torch-600">RUN THE PLAY.</span></h1>
+    </div>
+  </section>
+
+  <section class="container-x py-16 space-y-10">
+    {plays.map(p => (
+      <article class="card">
+        <h2 class="text-3xl">{p.title}</h2>
+        <p class="mt-1 text-ink-600">{p.sub}</p>
+        <ol class="mt-5 space-y-3">
+          {p.steps.map((step, i) => (
+            <li class="flex gap-4">
+              <span class="font-display text-2xl text-torch-500 leading-none">{String(i+1).padStart(2,'0')}</span>
+              <span class="text-ink-800">{step}</span>
+            </li>
+          ))}
+        </ol>
+      </article>
+    ))}
+  </section>
+
+  <CTA />
+</BaseLayout>
