@@ -1,0 +1,84 @@
+{
+  "id": "04-inspection-craft",
+  "title": "Inspection Craft + Photo Doctrine",
+  "duration_min": 14,
+  "summary": "Climb safely, document like an adjuster, and present photos that earn trust — the 60-second inspection that pays you for the next decade.",
+  "body_markdown": "## The inspection is the proof\n\nYou booked the inspection at the door. Now you have 60–90 seconds on the ladder to do work that will either earn the kitchen-table appointment or kill it. Most reps treat the inspection like a formality. The pros treat it like the highest-leverage minute of the entire deal.\n\nDone right, the inspection produces:\n\n- Photos that survive an adjuster meeting and a supplement battle\n- A homeowner who trusts you because you looked, took notes, and showed them what you found\n- A document trail you can pull up six months later if the claim gets challenged\n\nThis lesson is about doing the inspection well, every time, with discipline.\n\n## Ladder safety, said once\n\nWe're not going to belabor it, but: you cannot sell roofs from the hospital. Wear a hard hat or ball cap minimum. Use a ladder stabilizer. Three points of contact. Don't climb in wet weather or wind over 20 mph. Don't climb a roof you haven't visually pre-assessed for soft spots from the ground.\n\nIf the homeowner has an active dog in the yard, the inspection waits. If the gutter looks rotten or the soffit is loose, take photos from the ground and pass on the climb. No appointment is worth a fall.\n\n## The Photo Doctrine\n\nEvery inspection produces a minimum of **4 photos**, ideally **6**, in this exact order:\n\n### Photo 1: Wide shot of the worst slope\n\nFrom the top of the ladder or one step onto the roof, take a wide shot of the worst-affected slope. The wide shot gives context. The adjuster will want it. The homeowner will want it. Don't skip this even if it feels redundant.\n\n### Photo 2–4: Closeup hail hits with chalk circles\n\nCarry a piece of yellow or white chalk in your tool pouch. Circle 3–4 individual hail hits with chalk. Then photograph each circle from 6–8 inches away.\n\nWhy chalk? Three reasons:\n\n1. **Adjusters are trained to look for chalk-circled hits.** It signals a professional inspection.\n2. **Homeowners can actually see the damage in photos.** Without a chalk circle, hail bruises blur into shingle texture.\n3. **It documents your inspection date.** The chalk creates a temporal record.\n\nLook for hits the size of a dime or larger. Granule loss + a soft dent in the mat = a confirmed hail impact. Hits below dime-sized are real but harder to win a claim with.\n\n### Photo 5: Soft metals\n\nThe single most undeniable evidence on any storm property is dented soft metals — gutters, downspouts, AC condenser fins, roof vents, turbines, and the metal valleys on the roof itself.\n\nWhy? Because **soft metals don't dent from wind**. Only from ice impact. An adjuster cannot argue this away. A homeowner cannot argue this away. If you have a photo of dented AC fins or a dented gutter, you have a claim.\n\nPhotograph at least one soft-metal piece per property. Two is better.\n\n### Photo 6: Roof vent, pipe boot, or other commonly-missed item\n\nAdjusters routinely miss small items in their scope: roof vents, pipe boots (the rubber collars around plumbing stacks), drip edge, valley metal. Photograph at least one of these even if it's not damaged — you may need it later for a supplement.\n\n## Body language during the inspection\n\nWhile you're on the ladder, the homeowner is watching from the ground. Most reps don't realize this matters. It matters a lot.\n\n**Take your time.** Don't sprint. A 60-second inspection should feel like 90 seconds from the ground.\n\n**Mutter to yourself loud enough to be heard.** \"Mhm, yeah, see that?\" Homeowners hear that and lean in. Silence is unnerving.\n\n**Make notes on a clipboard or tablet between photos.** The visual of you writing things down is worth more than the notes themselves.\n\n**Come down deliberately, not in a hurry.** Slow descent signals professional.\n\n## Photo presentation: porch step, not front door\n\nThis is the single biggest unforced error reps make. They come down and start showing photos at the front door, with the homeowner half inside and half outside. Body language is wrong. The homeowner feels rushed. The conversation stays sales-coded.\n\nMove to the porch step or the railing. Sit if you can. Lean if you can't. Get yourself below or at eye level with the homeowner. Hand them the phone or tablet — let them hold it. Their hands on your phone changes the dynamic.\n\nWalk through the photos in the same order you took them:\n\n> \"Wide shot of your west slope here. See this discoloration pattern? That's hail bruising. Then I circled four hits — here, here, here, and here. Each one is a granule loss area with a soft dent underneath. Then your AC fins — see how they're flattened? That's ice impact, won't bend like that from wind.\"\n\nKeep the language descriptive, not evaluative. \"That's hail bruising\" is descriptive. \"Your roof is destroyed\" is evaluative. Evaluative language sounds like sales. Descriptive language sounds like an inspector.\n\n## When you find nothing\n\nSome inspections will turn up nothing. That's fine. Tell the truth.\n\n> \"Honestly, I went up there and I didn't find a lot. A couple of marginal spots but nothing I'd file a claim on today. Here are the photos so you have a baseline. If you notice leaks or stains in the next 6 months, give me a call and I'll come back.\"\n\nReps who lie about damage they didn't find win one bad job and lose ten good referrals. Reps who tell the truth get 2–3 referrals from \"no damage\" inspections because the homeowner trusts them.\n\n## The clipboard test\n\nHere's a simple check before you ring the doorbell: do you have a clipboard or tablet in your hand and a piece of chalk in your pocket?\n\nIf no clipboard, you don't look like an inspector. You look like a salesman. Go back to the truck.\n\nIf no chalk, you can't document hits well. Go back to the truck.\n\nThe difference between a 40% inspection-to-claim conversion rep and a 65% one is rarely talent. It's preparation. Carry the tools every single time.",
+  "key_takeaways": [
+    "Take 4–6 photos in order: wide, 3-4 chalk-circled hits, soft metals, vent.",
+    "Chalk circles signal a professional inspection to adjusters and homeowners.",
+    "Soft metals are undeniable — wind can't dent them. Always photograph.",
+    "Show photos on the porch step, not the doorway. Body language matters.",
+    "If you find nothing, say so. Truth-tellers get referrals; liars get lawsuits."
+  ],
+  "scripts": [
+    {
+      "name": "Photo walk-through narration",
+      "when_to_use": "Sitting on the porch step after the inspection, phone or tablet in the homeowner's hands.",
+      "lines": [
+        "Wide shot of your west slope here.",
+        "See this discoloration pattern? That's hail bruising.",
+        "Then I circled four hits — here, here, here, and here.",
+        "Each one is a granule loss area with a soft dent underneath.",
+        "Then your AC fins — see how they're flattened? That's ice impact, won't bend like that from wind."
+      ]
+    },
+    {
+      "name": "No-damage honesty close",
+      "when_to_use": "When the inspection turned up nothing or only marginal damage.",
+      "lines": [
+        "Honestly, I went up there and I didn't find a lot.",
+        "A couple of marginal spots but nothing I'd file a claim on today.",
+        "Here are the photos so you have a baseline.",
+        "If you notice leaks or stains in the next 6 months, give me a call and I'll come back."
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "q": "Why do soft metals (gutters, AC fins) win supplements that shingles can't?",
+      "choices": [
+        "They're more expensive to replace",
+        "Wind cannot dent them — only ice impact can",
+        "Insurance regulations require it",
+        "Adjusters can't reach them"
+      ],
+      "answer_index": 1,
+      "explanation": "Soft metals are the single most undeniable damage signal. Wind doesn't dent metal — only hail does."
+    },
+    {
+      "q": "Why circle hail hits with chalk?",
+      "choices": [
+        "It's a marketing gimmick",
+        "Adjusters expect it, photos show damage clearly, and it documents the inspection date",
+        "It protects the shingles",
+        "Chalk repels hail"
+      ],
+      "answer_index": 1,
+      "explanation": "Chalk circles photograph well, signal professionalism to adjusters, and timestamp the inspection."
+    },
+    {
+      "q": "Where should you present photos to the homeowner?",
+      "choices": [
+        "From the top of the ladder, shouting",
+        "At the front door, standing",
+        "On the porch step or railing, ideally with the phone in their hands",
+        "Back at the office over coffee"
+      ],
+      "answer_index": 2,
+      "explanation": "Porch-step body language is collaborative. Doorway body language feels rushed and sales-coded."
+    },
+    {
+      "q": "What do you do when an inspection turns up no real damage?",
+      "choices": [
+        "Exaggerate the marginal damage to get the claim",
+        "Claim the adjuster will find more than you did",
+        "Tell the truth, share the photos, leave a number for future calls",
+        "Don't show the photos and just leave"
+      ],
+      "answer_index": 2,
+      "explanation": "Honesty on no-damage inspections produces 2–3 referrals per honest call. Lying produces lawsuits."
+    }
+  ],
+  "homework": "Buy a 3-pack of yellow chalk and a clipboard tonight. Tomorrow, do not climb a single ladder without both in your hands. Photograph one soft-metal hit on every property — even if you don't think you need it for the primary claim, you'll need it for the supplement."
+}

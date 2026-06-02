@@ -1,0 +1,95 @@
+{
+  "id": "05-objection-vault",
+  "title": "The Objection Vault (Storm Edition)",
+  "duration_min": 18,
+  "summary": "Diagnose the bucket, not the words — handle the 8 objections that produce 95% of storm-door pushback without ever sounding like you're 'overcoming' anything.",
+  "body_markdown": "## Diagnose the bucket\n\nEvery objection a homeowner gives you at a storm door falls into one of 8 buckets. Once you can recognize the bucket in the first sentence, you don't need 50 memorized scripts. You need 8 plays.\n\nThe goal is never to **overcome** the objection. Overcoming sounds like force. The goal is to **diagnose** what the objection actually means and respond to the real concern.\n\nLet's walk through the 8 buckets.\n\n## Bucket 1 — \"I already have a guy.\"\n\n**Translation:** Almost never literally true. Means: \"I'm overwhelmed and don't want another decision today.\"\n\n**Response:**\n\n> \"Totally fair. Did the guy file the claim for you or did he just leave a quote? Because if he didn't file, you're still 100% open to whoever you want to use. The claim's between you and your insurance — not between you and a contractor.\"\n\nThis reframes the situation. They thought they were committed. They weren't. About 30% of \"I already have a guy\" homeowners book an inspection with you after this response.\n\n## Bucket 2 — \"My roof is fine.\"\n\n**Translation:** They haven't looked.\n\n**Response:**\n\n> \"Probably is. Most are. But hail bruises don't show from the ground — they only show on the soft metals and up close. If your gutters and AC fins are clean, we'll be off your lawn in 90 seconds. If they're not, we'll talk.\"\n\nYou're inviting the inspection without asking for one. The mention of AC fins specifically often gets a \"come to think of it, I did see a dent on mine\" response.\n\n## Bucket 3 — \"I don't want my insurance to go up.\"\n\n**Translation:** They've been told (incorrectly) that filing raises rates.\n\n**Response:**\n\n> \"Common worry. Storm claims are non-fault, which means by law in [your state] they can't single you out for a rate increase. Your whole zip's already going up next year if the storm was bad enough — claim or no claim. Want me to point you to the [state] DOI page on this so you can verify before you file?\"\n\nThe state DOI offer is the magic move. You're not asking them to trust you — you're pointing them to the regulator. Roofers who can quote DOI rules close roughly 2x more than roofers who hand-wave it.\n\nLearn your state's actual rules before you knock. They vary. Don't make this up.\n\n## Bucket 4 — \"I can't afford the deductible.\"\n\n**Translation:** They haven't done the math.\n\n**Response:**\n\n> \"How much is your deductible?\"\n\nWait for the answer. Then:\n\n> \"So you're paying [$X] and you're getting a $14,000 roof. Most homeowners finance the deductible at $100/month if cash is tight. The new roof adds $8K–$15K to your home value the day it's installed. The math is heavily in your favor — want me to show you on paper?\"\n\nGetting them to say the deductible number out loud reframes the conversation. They were comparing the deductible to zero. You're getting them to compare it to the new asset value.\n\nDo not offer to \"eat the deductible\" — it's illegal in most states and torches your reputation if anyone finds out. Offer financing instead.\n\n## Bucket 5 — \"I need to talk to my spouse.\"\n\n**Translation:** Real reason 70% of the time. Stall 30% of the time. You can't tell the difference, so treat them all as legitimate.\n\n**Response:**\n\n> \"Completely fair. Best decisions get made together. Two options: I can come back tomorrow at [time] when you're both home, or I can call your spouse right now and explain what I'd be doing — your call, what's easier?\"\n\nYou make it easier for them to include the spouse, not harder. Set the next-step time before you leave. Reps who walk away without setting a callback lose 60% of these. Reps who set a specific time keep 80%.\n\n## Bucket 6 — \"The adjuster already came and denied it.\"\n\n**Translation:** They were denied or partially approved on a previous claim.\n\n**Response:**\n\n> \"Got it. Was that recent or before [storm date]? Because adjusters write what they see on a given day. After [storm date], anything new from the storm is a new claim. I'd want to take a look at what's on the roof today, not what was on the roof six months ago. Sound fair?\"\n\nYou're not arguing with the previous adjuster. You're pointing out that the world changed between the previous denial and this storm. Often, the homeowner had no idea this was an option.\n\n## Bucket 7 — \"I'll think about it.\"\n\n**Translation:** You didn't earn the inspection. Something specific is unclear or untrusting.\n\n**Response:**\n\n> \"Of course. Think about what specifically? — because if it's the time investment, the inspection is 60 seconds; if it's trusting a stranger, I get it, that's why I'm leaving you the photos either way.\"\n\nDiagnose, don't push. The right question reopens the conversation 40% of the time. The wrong question (\"what's holding you back?\") sounds like a sales tactic and closes it.\n\n## Bucket 8 — \"How are you different from the other guys?\"\n\n**Translation:** Give me a reason to choose you.\n\n**Response:**\n\n> \"Honest answer? Most of us are similar on materials and warranty. What's different about us is that we file the claim with you sitting at the table, we attend the adjuster meeting in person, and we don't ask for a dollar until insurance approves the work. So you're never out of pocket beyond your deductible. That's it. No magic.\"\n\nStop selling features. Sell process and skin in the game. Adjuster-meeting attendance alone differentiates you from 70% of competitors.\n\n## The meta-skill: listen before you respond\n\nThe best storm reps treat objections as questions. The homeowner is asking — sometimes badly — for information that will let them say yes. Your job is to figure out what they're really asking.\n\nSlow down. Repeat what they said in your own words. \"So you're worried that...\" Then respond.\n\nReps who interrupt objections close at 50% the rate of reps who reflect them. That's a documented gap, not an opinion.\n\n## What you don't do\n\nThree things you never do, regardless of objection:\n\n1. **Never bad-mouth the previous contractor or adjuster.** It makes you look small.\n2. **Never invent urgency.** \"This deal expires tomorrow\" lies don't work and they kill referral potential.\n3. **Never argue.** If the homeowner is dug in, leave gracefully. They might call you in week 3.\n\nLeaving gracefully is a closing skill. It's the play that buys you the week-3 callback.",
+  "key_takeaways": [
+    "Diagnose the bucket, not the words. 8 buckets cover 95% of objections.",
+    "'I already have a guy' rarely means contractually committed.",
+    "Quote the DOI on insurance rate fears. Don't hand-wave it.",
+    "Get the deductible number said out loud. Reframes the math.",
+    "Listen before responding. Reflective reps close 2x interrupting reps."
+  ],
+  "scripts": [
+    {
+      "name": "Bucket 1 reframe — 'I already have a guy'",
+      "when_to_use": "Homeowner mentions another contractor at the door.",
+      "lines": [
+        "Totally fair.",
+        "Did the guy file the claim for you or did he just leave a quote?",
+        "Because if he didn't file, you're still 100% open to whoever you want to use.",
+        "The claim's between you and your insurance — not between you and a contractor."
+      ]
+    },
+    {
+      "name": "Bucket 4 math reframe — deductible",
+      "when_to_use": "Homeowner says they can't afford the deductible.",
+      "lines": [
+        "How much is your deductible?",
+        "So you're paying [$X] and you're getting a $14,000 roof.",
+        "Most homeowners finance the deductible at $100/month if cash is tight.",
+        "The new roof adds $8K–$15K to your home value the day it's installed.",
+        "The math is heavily in your favor — want me to show you on paper?"
+      ]
+    },
+    {
+      "name": "Bucket 5 callback set — spouse",
+      "when_to_use": "Homeowner needs to talk to spouse.",
+      "lines": [
+        "Completely fair. Best decisions get made together.",
+        "Two options:",
+        "I can come back tomorrow at [time] when you're both home,",
+        "or I can call your spouse right now and explain what I'd be doing —",
+        "your call, what's easier?"
+      ]
+    }
+  ],
+  "quiz": [
+    {
+      "q": "How many buckets cover 95% of storm-door objections?",
+      "choices": [
+        "3",
+        "8",
+        "20",
+        "Over 50"
+      ],
+      "answer_index": 1,
+      "explanation": "Eight buckets. Learn the buckets, not 50 scripts. Diagnosis beats memorization."
+    },
+    {
+      "q": "Best response to 'I don't want my insurance to go up'?",
+      "choices": [
+        "Promise it won't",
+        "Quote the state Department of Insurance rules and offer to point them to the page",
+        "Tell them everyone's rates are going up anyway",
+        "Skip the topic and move on"
+      ],
+      "answer_index": 1,
+      "explanation": "DOI sourcing is verifiable proof, not your word. Reps who quote DOI close 2x more on this objection."
+    },
+    {
+      "q": "How do you handle 'I'll think about it'?",
+      "choices": [
+        "Push harder with urgency",
+        "Walk away silent",
+        "Ask 'think about what specifically?' — diagnose the real hesitation",
+        "Promise a discount if they decide today"
+      ],
+      "answer_index": 2,
+      "explanation": "Diagnose, don't push. The specific concern is the real objection. The right diagnostic question reopens 40% of stalls."
+    },
+    {
+      "q": "What's the biggest mistake when handling 'I need to talk to my spouse'?",
+      "choices": [
+        "Calling the spouse anyway",
+        "Walking away without setting a specific callback time",
+        "Asking to come back",
+        "Leaving a card"
+      ],
+      "answer_index": 1,
+      "explanation": "No callback time = 60% loss rate. Specific callback time = 80% retention. The number is non-negotiable."
+    }
+  ],
+  "homework": "Print the 8 buckets on a single page and tape it to your truck dashboard. Tomorrow, after every objection, name the bucket out loud to yourself before you respond. You'll catch yourself misdiagnosing within an hour, and that's the entire skill."
+}
