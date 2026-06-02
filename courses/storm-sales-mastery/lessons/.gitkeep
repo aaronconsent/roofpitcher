@@ -1,0 +1,3 @@
+# Drop generated lesson JSONs here.
+# File naming: {{LESSON_ID}}.json (e.g., 01-storm-mindset.json)
+# See ../PROMPTS.md for instructions.

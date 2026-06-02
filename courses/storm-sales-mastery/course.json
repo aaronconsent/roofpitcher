@@ -1,0 +1,19 @@
+{
+  "slug": "storm-sales-mastery",
+  "title": "Storm Sales Mastery",
+  "tagline": "The 72-hour mobilization, the 7-question knock, and the kitchen-table close — Tyler's complete storm playbook.",
+  "instructor": "Tyler Mentges",
+  "audience": "Roofing sales reps and managers in storm territory",
+  "duration_min": 95,
+  "lesson_count": 6,
+  "price_usd": 297,
+  "tier": "pitch-pack",
+  "lessons": [
+    { "id": "01-storm-mindset",      "title": "The Storm Sales Mindset",           "duration_min": 12 },
+    { "id": "02-72-hour-playbook",   "title": "The 72-Hour Storm Response",        "duration_min": 18 },
+    { "id": "03-the-7-question-knock","title": "The 7-Question Storm Knock",       "duration_min": 16 },
+    { "id": "04-inspection-craft",   "title": "Inspection Craft + Photo Doctrine", "duration_min": 14 },
+    { "id": "05-objection-vault",    "title": "The Objection Vault (Storm Edition)","duration_min": 18 },
+    { "id": "06-kitchen-table-close","title": "The Kitchen-Table Close",           "duration_min": 17 }
+  ]
+}

@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CTA from '../../../components/CTA.astro';
+import course from '../../../../courses/storm-sales-mastery/course.json';
+
+// Try to load any generated lesson JSONs (graceful fallback if not yet generated)
+const lessons = await Promise.all(
+  course.lessons.map(async (l) => {
+    try {
+      const mod = await import(`../../../../courses/storm-sales-mastery/lessons/${l.id}.json`);
+      return { ...l, generated: true, data: mod.default };
+    } catch {
+      return { ...l, generated: false, data: null };
+    }
+  })
+);
+const generatedCount = lessons.filter(l => l.generated).length;
+---
+<BaseLayout title={`${course.title} — Roof Pitcher`} description={course.tagline}>
+  <section class="border-b-2 border-ink-900 bg-ink-900 text-white">
+    <div class="container-x py-16">
+      <a href="/learn/" class="text-sm font-bold uppercase tracking-wider text-ink-300 no-underline hover:text-torch-400">← Learning library</a>
+      <span class="eyebrow text-torch-400 mt-4 block">Pitch Pack · Module 1</span>
+      <h1 class="mt-2 text-5xl md:text-6xl">{course.title.toUpperCase()}</h1>
+      <p class="mt-4 max-w-2xl text-lg text-ink-200">{course.tagline}</p>
+      <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-bold uppercase tracking-wider text-ink-300">
+        <span>{course.lesson_count} lessons</span><span>•</span>
+        <span>{course.duration_min} min</span><span>•</span>
+        <span>w/ {course.instructor}</span><span>•</span>
+        <span class={generatedCount === course.lesson_count ? 'text-torch-400' : 'text-torch-400'}>
+          {generatedCount}/{course.lesson_count} lessons generated
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-12">
+    <ol class="divide-y-2 divide-ink-200 border-2 border-ink-900 shadow-hard bg-white">
+      {lessons.map((l, i) => (
+        <li class={`p-5 flex items-center justify-between gap-4 ${l.generated ? '' : 'opacity-60'}`}>
+          <div class="flex items-center gap-5 min-w-0">
+            <div class="font-display text-3xl text-torch-600 w-12 text-right">{String(i+1).padStart(2,'0')}</div>
+            <div class="min-w-0">
+              <div class="font-bold text-lg truncate">{l.title}</div>
+              <div class="text-sm text-ink-600">
+                {l.duration_min} min · {l.generated ? 'Ready' : 'Pending generation'}
+              </div>
+            </div>
+          </div>
+          {l.generated
+            ? <a href={`/learn/storm-sales-mastery/${l.id}/`} class="btn-primary text-sm">Open →</a>
+            : <span class="text-xs font-bold uppercase tracking-wider text-ink-500">Locked</span>}
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  {generatedCount < course.lesson_count && (
+    <section class="container-x pb-12">
+      <div class="card-dark">
+        <span class="eyebrow text-torch-400">Setup in progress</span>
+        <h3 class="mt-2 text-2xl">This course is still being generated.</h3>
+        <p class="mt-2 text-ink-200">
+          Follow the steps in <code class="bg-ink-800 px-2 py-0.5">courses/storm-sales-mastery/PROMPTS.md</code> to populate the lessons.
+          Drop the JSON files in <code class="bg-ink-800 px-2 py-0.5">courses/storm-sales-mastery/lessons/</code> and they'll appear here automatically on next build.
+        </p>
+      </div>
+    </section>
+  )}
+
+  <CTA title="Want the full Pitch Pack?" sub="Storm Sales Mastery is one of 6 modules. Get all 6 + 40 scripts + AI pitch auditor for $497." cta={{ href: '/services/#pitch-pack', label: 'Get the Pitch Pack' }} />
+</BaseLayout>
